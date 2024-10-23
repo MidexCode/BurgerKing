@@ -5,7 +5,7 @@ export const NewsCard = ({ image, title, content, link }) => {
         <img
           src={image}
           alt=""
-          width={"30%"}
+          width={"70%"}
           className="image"
           style={{ marginTop: "0.5rem" }}
         />
