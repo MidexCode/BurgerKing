@@ -1,9 +1,17 @@
 import { FaPaperPlane } from "react-icons/fa";
 import React, { useState } from "react";
 import face from "../assets/BK_ILLUSTRATION_PICKLE_EYE_MASK_ST_FC_RGB-2-1-1.png";
+import { MdClear } from "react-icons/md";
 
 const StoreLocator = () => {
   const [address, setAddress] = useState("");
+  const [isFocused, setIsFocused] = useState("");
+
+  const handleFocused = (e) => {
+    e.preventDefault();
+    setAddress(e.target.value);
+    setIsFocused(true);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,12 +31,15 @@ const StoreLocator = () => {
                 type="text"
                 placeholder="Your address"
                 value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                onChange={(e) => handleFocused(e)}
                 className="search-input"
               />
               <button type="submit" className="search-button">
-                {/* <Search size={24} /> */}
-                <FaPaperPlane size={24} />
+                {address != "" ? (
+                  <MdClear size={24} />
+                ) : (
+                  <FaPaperPlane size={24} />
+                )}
               </button>
             </form>
           </div>
