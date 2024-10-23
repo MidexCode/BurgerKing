@@ -72,6 +72,7 @@ button:focus-visible {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Flame", sans-serif;
 }
 
 body {
@@ -103,7 +104,7 @@ body {
 }
 
 .navlinks-1 {
-  font-family: "Flame", sans-serif;
+  /* font-family: "Flame", sans-serif; */
   color: #502314;
   list-style: none;
   display: flex;
@@ -256,4 +257,48 @@ p {
 
 .search-button:hover {
   color: #d62300;
+}
+
+/* Download Section */
+.download-container {
+  background-color: #d72300;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6rem;
+  /* border: 4px solid white; */
+}
+
+.download-container p {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 200;
+}
+
+.download-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  /* border: 1px solid white; */
+  /* max-width: 488px;
+  margin-bottom: -7px; */
+}
+
+.download-content-2 {
+  margin-right: 10rem;
+  margin-top: 4rem;
+  /* border: 2px solid white; */
+  width: 45%;
+}
+
+.download-content-3 {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.download-content-2a h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
