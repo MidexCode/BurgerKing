@@ -1,8 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { NavBar } from "./Components/Navbar";
+import HeroSlider from "./Components/HeroSlider";
 
-function App() {}
+function App() {
+  return (
+    <>
+      <NavBar />
+      <HeroSlider />
+    </>
+  );
+}
 
 export default App;
