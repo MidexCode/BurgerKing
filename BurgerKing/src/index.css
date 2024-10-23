@@ -308,12 +308,12 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   cursor: pointer;
 }
 
 .burger1 {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   margin-left: 5rem;
   margin-right: 2rem;
 }
@@ -346,4 +346,11 @@ a {
   margin-top: -1rem;
   font-size: 1rem;
   color: #88503e;
+}
+
+.News {
+  margin-left: 5rem;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  /* padding-top: 7rem; */
 }

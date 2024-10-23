@@ -13,7 +13,8 @@ function App() {
       <HeroSlider />
       <StoreLocator />
       <Download />
-      <NewsCard />
+      <News />
+      {/* <NewsCard /> */}
     </>
   );
 }
