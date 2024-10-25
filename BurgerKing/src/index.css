@@ -351,3 +351,38 @@ a {
   font-size: 1.5rem;
   /* padding-top: 7rem; */
 }
+
+/* Footer */
+.footer-container {
+  background-color: #502314;
+}
+
+.footer-content {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.footer-copyright-and-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-row1 {
+  margin-left: 15rem;
+  margin-top: 3rem;
+}
+
+.footer-row2 {
+  margin-left: 6rem;
+  margin-top: 3rem;
+}
+
+.footer-row3 {
+  margin-left: 10rem;
+  margin-top: 3rem;
+}
+
+.footer-title {
+  margin-top: 3rem;
+  margin-left: 12rem;
+}

@@ -5,6 +5,7 @@ import StoreLocator from "./Components/StoreLocator";
 import { Download } from "./Components/Download";
 import { News } from "./Components/News";
 import { NewsCard } from "./Components/NewsCard";
+import { Footer } from "./Components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <StoreLocator />
       <Download />
       <News />
+      <Footer />
       {/* <NewsCard /> */}
     </>
   );
