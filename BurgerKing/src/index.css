@@ -131,6 +131,17 @@ body {
   color: #d62300;
 }
 
+.nav-button {
+  background-color: #d62300;
+  padding: 1rem 1rem;
+  color: #f5ebdc;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 35rem;
+}
+
 /* Swiper */
 .slider-container {
   width: 100%;
