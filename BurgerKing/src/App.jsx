@@ -1,24 +1,25 @@
-import "./App.css";
-import { NavBar } from "./Components/Navbar";
-import HeroSlider from "./Components/HeroSlider";
-import StoreLocator from "./Components/StoreLocator";
-import { Download } from "./Components/Download";
-import { News } from "./Components/News";
-import { NewsCard } from "./Components/NewsCard";
-import { Footer } from "./Components/Footer";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import { Home } from "./Components/home/Home";
+import { Order } from "./Components/Order/Order";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/order",
+    element: <Order />,
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <NavBar />
-      <HeroSlider />
-      <StoreLocator />
-      <Download />
-      <News />
-      <Footer />
-      {/* <NewsCard /> */}
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
