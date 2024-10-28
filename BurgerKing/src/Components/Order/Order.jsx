@@ -3,6 +3,9 @@ import { Footer } from "../footer/Footer";
 import logo from "../../assets/Burger-King-logo.svg";
 import { Link } from "react-router-dom";
 import Facebook from "../../assets/Facebook.svg";
+import homeImage from "../../assets/homeImage_6698d1b71eb46.jpg";
+import { Accordion } from "@mui/material";
+import { AccordionTransition } from "./Accordion";
 
 const SignInModal = ({ onClose }) => {
   return (
@@ -40,7 +43,7 @@ export const Order = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar ">
         <div className="logo">
           <Link to={"/"}>
             <img src={logo} alt="Burger King Logo" />
@@ -87,6 +90,11 @@ export const Order = () => {
 
       {/* Render modal when isModalOpen is true */}
       {isModalOpen && <SignInModal onClose={() => setIsModalOpen(false)} />}
+
+      <AccordionTransition />
+      <div className="homeimg">
+        <img src={homeImage} alt="" width={"100%"} />
+      </div>
 
       <Footer />
     </>

@@ -85,6 +85,9 @@ body {
 
 /* NavBar Style */
 .navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
   display: flex;
   padding-left: 12rem;
   padding-top: 1rem;
@@ -504,6 +507,7 @@ a {
   display: flex;
   justify-content: center;
   padding: 0;
+  text-align: center;
   /* align-items: center; */
   padding-top: 1rem;
   background-color: #4267b2;
@@ -524,4 +528,12 @@ a {
 
 .Order-p {
   color: #fff;
+}
+
+.homeimg {
+  text-align: center;
+  /* background-image: url("../../BurgerKing/src/assets/homeImage_6698d1b71eb46.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
