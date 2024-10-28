@@ -87,6 +87,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
+  z-index: 20;
   overflow: hidden;
   display: flex;
   padding-left: 12rem;
@@ -530,10 +531,111 @@ a {
   color: #fff;
 }
 
-.homeimg {
-  text-align: center;
-  /* background-image: url("../../BurgerKing/src/assets/homeImage_6698d1b71eb46.jpg"); */
+.imgcontainer {
+  position: sticky;
+  background-image: url("../../BurgerKing/src/assets/homeImage_6698d1b71eb46.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
+}
+
+.homeimg {
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accordion */
+
+.modalContainer {
+  background-color: #efe2cf;
+  margin-top: 4rem;
+  border-radius: 20px;
+  padding: 1rem;
+  display: inline-block;
+  margin-left: 9rem;
+  margin-bottom: 3rem;
+  /* padding-top: 2rem; */
+  position: relative;
+  width: 30%;
+}
+
+.modaltitle title {
+  /* font-weight: bolder; */
+  color: #4f2d1d;
+  font-size: 0.5rem;
+  margin-left: 5px;
+}
+
+.modallist-1 {
+  background-color: #f5ebdc;
+  padding: 1rem;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+  padding-left: 1rem;
+  /* justify-content: space-between; */
+  margin-bottom: 1rem;
+}
+
+.modallist-1 span {
+  /* position: relative; */
+  top: 8rem;
+  transform: translate(-40%, 10px) scale(0);
+  transform-origin: top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* .Takeout2 {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #4f2d1d;
+  margin-left: 22px;
+} */
+
+.knife2 {
+  /* position: absolute;
+  top: 37%;
+  left: 19%; */
+  font-size: 15px;
+  display: none;
+}
+
+.Takeout2 {
+  /* position: absolute;
+  top: 63%;
+  left: 19%; */
+  font-size: 15px;
+  display: none;
+}
+
+.delivery2 {
+  /* position: absolute;
+  top: 88%;
+  left: 19%; */
+  display: none;
+  font-size: 15px;
+}
+
+.modallist-1:hover .knife2 {
+  /* transform: translate(-2%, 0) scale(1); */
+  display: block;
+}
+.modallist-1:hover .Takeout2 {
+  /* transform: translate(3%, 0) scale(1); */
+  display: block;
+}
+.modallist-1:hover .delivery2 {
+  /* transform: translate(-2%, 0) scale(1); */
+  display: block;
 }
