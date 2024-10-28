@@ -11,7 +11,7 @@ export const AccordionTransition = () => {
       </div>
 
       <div className="modallist">
-        <div className="modallist-1">
+        <div className="modallist-1  ">
           <img src={dineinIcon} alt="" />
           <div className="span">
             <h4>Dine-in Pickup</h4>

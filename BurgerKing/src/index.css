@@ -588,20 +588,16 @@ a {
   margin-bottom: 1rem;
 }
 
-.modallist-1 span {
+.span {
   /* position: relative; */
-  top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* top: 8rem;
   transform: translate(-40%, 10px) scale(0);
   transform-origin: top;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease; */
 }
-
-/* .Takeout2 {
-  font-size: 1rem;
-  font-weight: bolder;
-  color: #4f2d1d;
-  margin-left: 22px;
-} */
 
 .knife2 {
   /* position: absolute;
@@ -629,13 +625,16 @@ a {
 
 .modallist-1:hover .knife2 {
   /* transform: translate(-2%, 0) scale(1); */
+  margin-bottom: -0.5rem;
   display: block;
 }
 .modallist-1:hover .Takeout2 {
   /* transform: translate(3%, 0) scale(1); */
+  margin-bottom: -0.5rem;
   display: block;
 }
 .modallist-1:hover .delivery2 {
   /* transform: translate(-2%, 0) scale(1); */
+  margin-bottom: -0.5rem;
   display: block;
 }
