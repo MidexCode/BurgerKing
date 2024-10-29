@@ -1,55 +1,107 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Burger-King-logo.svg";
+import ActiveLastBreadcrumb from "../Order/ActiveLastBreadcrumb";
+import { Footer } from "../footer/Footer";
+import WhooperSandwich from "../../assets/Whopper-Sandw-1024x659.jpg";
+import SteakHouse from "../../assets/steakhouses-1024x659.jpg";
 
 export const Menu = () => {
   return (
     <>
-      <nav className="navbar ">
-        <div className="logo">
-          <Link to={"https://www.burger-king.ng/"}>
-            <img src={logo} alt="Burger King Logo" />
-          </Link>
-        </div>
-        <ul className="navlinks-1">
-          <li>
-            <Link to="/order" className="nav-links">
-              Order
+      <div className="nav">
+        <nav className="navbar ">
+          <div className="logo">
+            <Link to={"https://www.burger-king.ng/"}>
+              <img src={logo} alt="Burger King Logo" />
             </Link>
-          </li>
-          <li>
-            <Link to="/menu" className="nav-links">
-              Menu
-            </Link>
-          </li>
-          <li>
-            <Link to="offers" className="nav-links">
-              Offer
-            </Link>
-          </li>
-          <li>
-            <Link to="/restaurants" className="nav-links">
-              Restaurants
-            </Link>
-          </li>
-          <li>
-            <Link to="/careers" className="nav-links">
-              Careers
-            </Link>
-          </li>
-          <li>
-            <Link to="/news" className="nav-links">
-              News
-            </Link>
-          </li>
-        </ul>
+          </div>
+          <ul className="navlinks-1">
+            <li>
+              <Link to="/order" className="nav-links">
+                Order
+              </Link>
+            </li>
+            <li>
+              <Link to="/menu" className="nav-links">
+                Menu
+              </Link>
+            </li>
+            <li>
+              <Link to="offers" className="nav-links">
+                Offer
+              </Link>
+            </li>
+            <li>
+              <Link to="/restaurants" className="nav-links">
+                Restaurants
+              </Link>
+            </li>
+            <li>
+              <Link to="/careers" className="nav-links">
+                Careers
+              </Link>
+            </li>
+            <li>
+              <Link to="/news" className="nav-links">
+                News
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-        <ul>
-          <li>
-            <Link to="/login" className="nav-links"></Link>
-          </li>
-        </ul>
-      </nav>
+        <nav className="secondary-nav">
+          <ul className="navlinks-2">
+            <li>
+              <Link to="/" className="menulinks">
+                Flammed Grilled Burgers
+              </Link>
+              <Link to="/" className="menulinks">
+                Chicken Burgers
+              </Link>
+              <Link to="/" className="menulinks">
+                Sides
+              </Link>
+              <Link to="/" className="menulinks">
+                Drinks
+              </Link>
+              <Link to="/" className="menulinks">
+                Desserts
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <ActiveLastBreadcrumb />
+      <section className="fgb">
+        <div className="fgb-header">
+          <h2 className="fgb-title">Flammed Grilled Burgers</h2>
+        </div>
+
+        <div className="fgb-img">
+          <div className="fgb-img-list">
+            <a
+              href="https://www.burger-king.ng/menu/flame-grilled-burgers/whopper"
+              aria-label="Whopper®"
+            >
+              <img src={WhooperSandwich} alt="Whopper® image" />
+              <h2>Whopper®</h2>
+            </a>
+          </div>
+
+          <div className="fgb-img-list">
+            <a
+              href="https://www.burger-king.ng/menu/flame-grilled-burgers/steakhouse"
+              aria-label="Whopper®"
+            >
+              <img src={SteakHouse} alt="Steakhouse image" />
+              <h2>Steakhouse</h2>
+            </a>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 };

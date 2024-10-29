@@ -95,6 +95,7 @@ body {
   padding-bottom: 0.5rem;
   gap: 2rem;
   background-color: #efe8db;
+
   /* background-color: #f5e3c3; */
 }
 
@@ -633,41 +634,27 @@ a {
   gap: 15px;
   align-items: center;
   padding-left: 1rem;
-  /* justify-content: space-between; */
+
   margin-bottom: 1rem;
 }
 
 .span {
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* top: 8rem;
-  transform: translate(-40%, 10px) scale(0);
-  transform-origin: top;
-  transition: transform 0.3s ease, opacity 0.3s ease; */
 }
 
 .knife2 {
-  /* position: absolute;
-  top: 37%;
-  left: 19%; */
   font-size: 15px;
   display: none;
 }
 
 .Takeout2 {
-  /* position: absolute;
-  top: 63%;
-  left: 19%; */
   font-size: 15px;
   display: none;
 }
 
 .delivery2 {
-  /* position: absolute;
-  top: 88%;
-  left: 19%; */
   display: none;
   font-size: 15px;
 }
@@ -686,4 +673,84 @@ a {
   /* transform: translate(-2%, 0) scale(1); */
   margin-bottom: -0.5rem;
   display: block;
+}
+
+/* Menu Section */
+.nav {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+}
+
+.navlinks-2 {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.navlinks-2 li Link {
+  color: #502314;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 5px;
+  color: inherit;
+  position: relative; /* This is important for the underline positioning */
+  padding: 5px 0;
+}
+
+.secondary-nav {
+  margin-top: 1rem;
+  margin-left: 30rem;
+}
+
+.menulinks {
+  color: #502314;
+  margin-right: 2rem;
+}
+
+/* .menulinks:hover::after {
+  transform: scaleX(1);
+}
+
+.menulinks::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #d62300; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease;
+} */
+
+.breadcrumb {
+  margin-left: 12rem;
+  margin-top: 2rem;
+}
+
+.fgb-title {
+  margin-left: 12rem;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+}
+
+.fgb-img-list img {
+  margin-left: 12rem;
+  margin-top: 2rem;
+  transition: transform 0.5s;
+  border-radius: 4%;
+  cursor: pointer;
+  width: 350px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover;
+}
+
+.fgb-img-list h2 {
+  margin-left: 19rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
 }
