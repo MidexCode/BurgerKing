@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Facebook from "../../assets/Facebook.svg";
 import homeImage from "../../assets/homeImage_6698d1b71eb46.jpg";
 import { AccordionTransition } from "./Accordion";
-import { News } from "../home/News";
+// import { News } from "../home/News";
+import { OrderNews } from "./OrderNews";
 
 const SignInModal = ({ onClose }) => {
   return (
@@ -98,7 +99,7 @@ export const Order = () => {
         </div>
       </div>
 
-      <News />
+      <OrderNews />
       <Footer />
     </>
   );
