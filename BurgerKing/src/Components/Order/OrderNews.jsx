@@ -34,16 +34,27 @@ export const OrderNews = () => {
     <>
       <div className="news-container">
         <div className="news-title">
-          <div className="news-title-1">
-            <h2 className="News">News</h2>
+          <div className="news-heading">
+            <div className="news-title-1">
+              <h2 className="News">News</h2>
 
-            <p className="news-view-action">View all</p>
-            <button className="news-button">
-              <IoIosArrowBack />
-            </button>
-            <button className="news-button">
-              <IoIosArrowForward />
-            </button>
+              <div className="newsbutton">
+                <a
+                  href="https://order.burger-king.ng/news/"
+                  className="news-view-action"
+                >
+                  {" "}
+                  view all
+                </a>
+                {/* <p >View all</p> */}
+                <button className="news-button">
+                  <IoIosArrowBack />
+                </button>
+                <button className="news-button">
+                  <IoIosArrowForward />
+                </button>
+              </div>
+            </div>
           </div>
 
           <div className="card">
