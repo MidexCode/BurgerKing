@@ -11,7 +11,7 @@ export const MenuNewsCard = ({ image, title, content, link }) => {
         />
         <a href={link}>
           <h2 className="title order-title">{title}</h2>
-          <p className="content">{content}</p>
+          {/* <p className="content">{content}</p> */}
         </a>
       </div>
     </>
