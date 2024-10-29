@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/Burger-King-logo.svg";
 import ActiveLastBreadcrumb from "../Order/ActiveLastBreadcrumb";
 import { Footer } from "../footer/Footer";
-import WhooperSandwich from "../../assets/Whopper-Sandw-1024x659.jpg";
-import SteakHouse from "../../assets/steakhouses-1024x659.jpg";
 import { MenuNews } from "./MenuNews";
+import { CBNews } from "./CBNews";
+import { SidesNews } from "./SidesNews";
 
 export const Menu = () => {
   return (
@@ -103,6 +103,18 @@ export const Menu = () => {
         </div> */}
 
         <MenuNews />
+
+        <div className="fgb-header">
+          <h2 className="fgb-title1">Chicken Burger</h2>
+        </div>
+
+        <CBNews />
+
+        <div className="fgb-header">
+          <h2 className="fgb-title1">Sides</h2>
+        </div>
+
+        <SidesNews />
       </section>
       <Footer />
     </>

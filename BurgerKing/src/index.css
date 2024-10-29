@@ -733,9 +733,14 @@ a {
 }
 
 .fgb-title {
-  margin-left: 12rem;
+  margin-left: 11rem;
   margin-top: 5rem;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
+}
+
+.fgb-title1 {
+  font-size: 1.9rem;
+  margin-left: 11rem;
 }
 
 .fgb-img-list img {

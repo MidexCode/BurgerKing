@@ -5,8 +5,8 @@ export const MenuNewsCard = ({ image, title, content, link }) => {
         <img
           src={image}
           alt=""
-          width={"90%"}
-          className="image order-image"
+          width={"70%"}
+          className="image"
           style={{ marginTop: "0.5rem" }}
         />
         <a href={link}>
