@@ -5,6 +5,7 @@ import ActiveLastBreadcrumb from "../Order/ActiveLastBreadcrumb";
 import { Footer } from "../footer/Footer";
 import WhooperSandwich from "../../assets/Whopper-Sandw-1024x659.jpg";
 import SteakHouse from "../../assets/steakhouses-1024x659.jpg";
+import { MenuNews } from "./MenuNews";
 
 export const Menu = () => {
   return (
@@ -79,7 +80,7 @@ export const Menu = () => {
           <h2 className="fgb-title">Flammed Grilled Burgers</h2>
         </div>
 
-        <div className="fgb-img">
+        {/* <div className="fgb-img">
           <div className="fgb-img-list">
             <a
               href="https://www.burger-king.ng/menu/flame-grilled-burgers/whopper"
@@ -99,7 +100,9 @@ export const Menu = () => {
               <h2>Steakhouse</h2>
             </a>
           </div>
-        </div>
+        </div> */}
+
+        <MenuNews />
       </section>
       <Footer />
     </>
