@@ -43,6 +43,12 @@ export const Menu = () => {
             </Link>
           </li>
         </ul>
+
+        <ul>
+          <li>
+            <Link to="/login" className="nav-links"></Link>
+          </li>
+        </ul>
       </nav>
     </>
   );
