@@ -714,6 +714,7 @@ a {
 .menulinks {
   color: #502314;
   margin-right: 2rem;
+  cursor: pointer;
   scroll-behavior: smooth;
 }
 
