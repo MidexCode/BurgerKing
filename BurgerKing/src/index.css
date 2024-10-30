@@ -721,7 +721,7 @@ a {
 /* .menulinks:hover::after {
   transform: scaleX(1);
 }
-
+*/
 .menulinks::after {
   content: "";
   position: absolute;
@@ -732,7 +732,7 @@ a {
   background-color: #d62300; 
   transform: scaleX(0); 
   transition: transform 0.3s ease;
-} */
+} 
 
 .breadcrumb {
   margin-left: 12rem;
