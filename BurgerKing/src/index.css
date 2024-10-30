@@ -677,14 +677,19 @@ a {
 
 /* Menu Section */
 .nav {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  overflow: hidden;
   padding-bottom: 1rem;
+  gap: 2rem;
+  background-color: #efe8db;
 }
 
 .navlinks-2 {
   position: sticky;
-  top: 0;
-  z-index: 20;
+  /* top: 0; */
+  /* z-index: 20; */
   overflow: hidden;
 }
 
@@ -709,6 +714,7 @@ a {
 .menulinks {
   color: #502314;
   margin-right: 2rem;
+  scroll-behavior: smooth;
 }
 
 /* .menulinks:hover::after {
@@ -758,4 +764,11 @@ a {
   margin-left: 19rem;
   margin-top: 1rem;
   font-size: 1.7rem;
+}
+
+/* Offers */
+.offers-h2 {
+  margin-left: 27rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }

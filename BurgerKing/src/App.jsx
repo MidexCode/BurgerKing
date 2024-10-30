@@ -7,6 +7,7 @@ import {
 import { Home } from "./Components/home/Home";
 import { Order } from "./Components/Order/Order";
 import { Menu } from "./Components/Menu/menu";
+import { Offers } from "./Components/Offers/Offers";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/menu",
     element: <Menu />,
+  },
+  {
+    path: "/offers",
+    element: <Offers />,
   },
 ]);
 

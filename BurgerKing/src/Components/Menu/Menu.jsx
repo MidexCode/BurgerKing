@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as Link1 } from "react-router-dom";
+import { Link } from "react-scroll"; // Rename Scroll's Link
 import logo from "../../assets/Burger-King-logo.svg";
 import ActiveLastBreadcrumb from "../Order/ActiveLastBreadcrumb";
 import { Footer } from "../footer/Footer";
 import { MenuNews } from "./MenuNews";
 import { CBNews } from "./CBNews";
 import { SidesNews } from "./SidesNews";
+import { DrinksNews } from "./DrinksNews";
+import { DessertsNews } from "./Desserts";
 
 export const Menu = () => {
   return (
@@ -13,40 +16,40 @@ export const Menu = () => {
       <div className="nav">
         <nav className="navbar ">
           <div className="logo">
-            <Link to={"https://www.burger-king.ng/"}>
+            <Link1 to={"https://www.burger-king.ng/"}>
               <img src={logo} alt="Burger King Logo" />
-            </Link>
+            </Link1>
           </div>
           <ul className="navlinks-1">
             <li>
-              <Link to="/order" className="nav-links">
+              <Link1 to="/order" className="nav-links">
                 Order
-              </Link>
+              </Link1>
             </li>
             <li>
-              <Link to="/menu" className="nav-links">
+              <Link1 to="/menu" className="nav-links">
                 Menu
-              </Link>
+              </Link1>
             </li>
             <li>
-              <Link to="offers" className="nav-links">
+              <Link1 to="/offers" className="nav-links">
                 Offer
-              </Link>
+              </Link1>
             </li>
             <li>
-              <Link to="/restaurants" className="nav-links">
+              <Link1 to="/restaurants" className="nav-links">
                 Restaurants
-              </Link>
+              </Link1>
             </li>
             <li>
-              <Link to="/careers" className="nav-links">
+              <Link1 to="/careers" className="nav-links">
                 Careers
-              </Link>
+              </Link1>
             </li>
             <li>
-              <Link to="/news" className="nav-links">
+              <Link1 to="/news" className="nav-links">
                 News
-              </Link>
+              </Link1>
             </li>
           </ul>
         </nav>
@@ -54,19 +57,58 @@ export const Menu = () => {
         <nav className="secondary-nav">
           <ul className="navlinks-2">
             <li>
-              <Link to="/" className="menulinks">
+              <Link
+                to="Flammed Grilled Burgers"
+                smooth={true}
+                duration={500}
+                className="menulinks"
+                spy={true}
+                offset={-70}
+              >
                 Flammed Grilled Burgers
               </Link>
-              <Link to="/" className="menulinks">
+
+              <Link
+                to="Chicken Burger"
+                smooth={true}
+                duration={500}
+                className="menulinks"
+                spy={true}
+                offset={-70}
+              >
                 Chicken Burgers
               </Link>
-              <Link to="/" className="menulinks">
+
+              <Link
+                to="Sides"
+                smooth={true}
+                duration={500}
+                className="menulinks"
+                spy={true}
+                offset={-70}
+              >
                 Sides
               </Link>
-              <Link to="/" className="menulinks">
+
+              <Link
+                to="Drinks"
+                smooth={true}
+                duration={500}
+                className="menulinks"
+                spy={true}
+                offset={-70}
+              >
                 Drinks
               </Link>
-              <Link to="/" className="menulinks">
+
+              <Link
+                to="Desserts"
+                smooth={true}
+                duration={500}
+                className="menulinks"
+                spy={true}
+                offset={-70}
+              >
                 Desserts
               </Link>
             </li>
@@ -76,45 +118,40 @@ export const Menu = () => {
 
       <ActiveLastBreadcrumb />
       <section className="fgb">
-        <div className="fgb-header">
-          <h2 className="fgb-title">Flammed Grilled Burgers</h2>
-        </div>
-
-        {/* <div className="fgb-img">
-          <div className="fgb-img-list">
-            <a
-              href="https://www.burger-king.ng/menu/flame-grilled-burgers/whopper"
-              aria-label="Whopper®"
-            >
-              <img src={WhooperSandwich} alt="Whopper® image" />
-              <h2>Whopper®</h2>
-            </a>
+        <section id="Flammed Grilled Burgers">
+          <div className="fgb-header">
+            <h2 className="fgb-title">Flammed Grilled Burgers</h2>
           </div>
+          <MenuNews />
+        </section>
 
-          <div className="fgb-img-list">
-            <a
-              href="https://www.burger-king.ng/menu/flame-grilled-burgers/steakhouse"
-              aria-label="Whopper®"
-            >
-              <img src={SteakHouse} alt="Steakhouse image" />
-              <h2>Steakhouse</h2>
-            </a>
+        <section id="Chicken Burger">
+          <div className="fgb-header">
+            <h2 className="fgb-title1">Chicken Burger</h2>
           </div>
-        </div> */}
+          <CBNews />
+        </section>
 
-        <MenuNews />
+        <section id="Sides">
+          <div className="fgb-header">
+            <h2 className="fgb-title1">Sides</h2>
+          </div>
+          <SidesNews />
+        </section>
 
-        <div className="fgb-header">
-          <h2 className="fgb-title1">Chicken Burger</h2>
-        </div>
+        <section id="Drinks">
+          <div className="fgb-header">
+            <h2 className="fgb-title1">Drinks</h2>
+          </div>
+          <DrinksNews />
+        </section>
 
-        <CBNews />
-
-        <div className="fgb-header">
-          <h2 className="fgb-title1">Sides</h2>
-        </div>
-
-        <SidesNews />
+        <section id="Desserts">
+          <div className="fgb-header">
+            <h2 className="fgb-title1">Desserts</h2>
+          </div>
+          <DessertsNews />
+        </section>
       </section>
       <Footer />
     </>
