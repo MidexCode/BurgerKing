@@ -22,12 +22,12 @@ export const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to="offers" className="nav-links">
+            <Link to="/offers" className="nav-links">
               Offer
             </Link>
           </li>
           <li>
-            <Link to="/restaurants" className="nav-links">
+            <Link to="/restuarant" className="nav-links">
               Restaurants
             </Link>
           </li>

@@ -5,9 +5,9 @@ export const Offers = () => {
   return (
     <>
       <NavBar />
-
-      <h2 className="offers-h2">No coupons available at the moment.</h2>
-
+      <div className="offers">
+        <h2 className="offers-h2">No coupons available at the moment.</h2>
+      </div>
       <Footer />
     </>
   );

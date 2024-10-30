@@ -767,8 +767,17 @@ a {
 }
 
 /* Offers */
-.offers-h2 {
-  margin-left: 27rem;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+.offers {
+  /* margin-top: 10rem; */
+  height: 40vh;
+  /* width: 90rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* .offers-h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */

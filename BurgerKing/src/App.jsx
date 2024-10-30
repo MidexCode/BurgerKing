@@ -8,6 +8,7 @@ import { Home } from "./Components/home/Home";
 import { Order } from "./Components/Order/Order";
 import { Menu } from "./Components/Menu/menu";
 import { Offers } from "./Components/Offers/Offers";
+import { Restuarant } from "./Components/Restuarant/Restuarant";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/offers",
     element: <Offers />,
+  },
+  {
+    path: "/restuarant",
+    element: <Restuarant />,
   },
 ]);
 
