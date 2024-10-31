@@ -730,4 +730,7 @@ a {
   margin-top: 4rem;
 }
 
-/* Map */
+/* .sidenav {
+  display: flex;
+  flex-direction: row;
+} */

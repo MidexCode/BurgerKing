@@ -32,43 +32,49 @@ export const Restuarant = () => {
     <>
       <NavBar />
       <section className="sidenav">
-        <div role="presentation" onClick={handleClick} className="breadcrumb1">
-          <Breadcrumbs aria-label="breadcrumb">
-            <Link underline="hover" color="#502314" href="/">
-              Home
-            </Link>
-            <Link
-              underline="hover"
-              color="#d62300"
-              href="/material-ui/react-breadcrumbs/"
-              aria-current="page"
-            >
-              Restaurant
-            </Link>
-          </Breadcrumbs>
-        </div>
+        <div className="sidebar">
+          <div
+            role="presentation"
+            onClick={handleClick}
+            className="breadcrumb1"
+          >
+            <Breadcrumbs aria-label="breadcrumb">
+              <Link underline="hover" color="#502314" href="/">
+                Home
+              </Link>
+              <Link
+                underline="hover"
+                color="#d62300"
+                href="/material-ui/react-breadcrumbs/"
+                aria-current="page"
+              >
+                Restaurant
+              </Link>
+            </Breadcrumbs>
+          </div>
 
-        <div className="form">
-          <form onSubmit={handleSubmit} className="search-form">
-            <input
-              type="text"
-              placeholder="Please Enter Your Location"
-              value={address}
-              onChange={handleFocused}
-              className="search-input"
-            />
-            <button type="submit" className="search-button">
-              {address !== "" ? (
-                <MdClear size={24} onClick={() => setAddress("")} />
-              ) : (
-                <FaPaperPlane size={24} />
-              )}
-            </button>
-          </form>
-        </div>
+          <div className="form">
+            <form onSubmit={handleSubmit} className="search-form">
+              <input
+                type="text"
+                placeholder="Please Enter Your Location"
+                value={address}
+                onChange={handleFocused}
+                className="search-input"
+              />
+              <button type="submit" className="search-button">
+                {address !== "" ? (
+                  <MdClear size={24} onClick={() => setAddress("")} />
+                ) : (
+                  <FaPaperPlane size={24} />
+                )}
+              </button>
+            </form>
+          </div>
 
-        <div className="fgb-header">
-          <h2 className="fgb-title2">Restaurant</h2>
+          <div className="fgb-header">
+            <h2 className="fgb-title2">Restaurant</h2>
+          </div>
         </div>
 
         <BasicMap />
