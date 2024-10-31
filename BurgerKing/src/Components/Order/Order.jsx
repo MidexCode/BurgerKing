@@ -62,7 +62,7 @@ export const Order = () => {
             </Link>
           </li>
           <li>
-            <Link to="offers" className="nav-links">
+            <Link to="/offers" className="nav-links">
               Offer
             </Link>
           </li>
