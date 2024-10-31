@@ -27,7 +27,7 @@ export const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/restuarant" className="nav-links">
+            <Link to="/restaurants" className="nav-links">
               Restaurants
             </Link>
           </li>
