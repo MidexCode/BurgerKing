@@ -6,46 +6,43 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import React, { useState, useEffect } from "react";
 import { BasicMap } from "./BasicMap";
-import "esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css";
-import * as ELG from "esri-leaflet-geocoder";
-import { useMap } from "react-leaflet";
 
 function handleClick(event) {
   event.preventDefault();
   console.info("You clicked a breadcrumb.");
 }
 
-function MapWithSearch({ query }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (query) {
-      const geocodeService = ELG.geocodeService();
-      geocodeService
-        .geocode()
-        .text(query)
-        .run((err, results) => {
-          if (err) {
-            console.error(err);
-            return;
-          }
-          const { latlng } = results.results[0];
-          map.flyTo([latlng.lat, latlng.lng], 13); // Adjust zoom as needed
-        });
-    }
-  }, [query, map]);
-
-  return null;
-}
-
 export const Restuarant = () => {
-  const [query, setQuery] = useState("");
   const [address, setAddress] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+  const handleFocused = (e) => {
+    setAddress(e.target.value);
+    setIsFocused(true);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setQuery(address); // Update the query state with the address entered
   };
+
+  function LocationMarker() {
+    const [position, setPosition] = useState(null);
+
+    const map = useMapEvents({
+      click() {
+        map.locate();
+      },
+      locationfound(e) {
+        setPosition(e.latlng);
+        map.flyTo(e.latlng, map.getZoom());
+      },
+    });
+
+    return position === null ? null : (
+      <Marker position={position}>
+        <Popup>You are here</Popup>
+      </Marker>
+    );
+  }
 
   return (
     <>
@@ -86,7 +83,8 @@ export const Restuarant = () => {
                 type="text"
                 placeholder="Please Enter Your Location"
                 value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                onChange={handleFocused}
+                // onChange={(e) => setAddress(e.target.value)}
                 className="search-input"
               />
               <button type="submit" className="search-button">
@@ -132,9 +130,7 @@ export const Restuarant = () => {
           </div>
         </div>
 
-        <BasicMap>
-          <MapWithSearch query={query} />
-        </BasicMap>
+        <BasicMap />
       </section>
       <Footer />
     </>
