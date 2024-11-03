@@ -1,38 +1,65 @@
 import { Footer } from "../footer/Footer";
 import { NavBar } from "../home/Navbar";
 import { FaPaperPlane } from "react-icons/fa";
-import { MdClear } from "react-icons/md"; // Importing MdClear icon
+import { MdClear } from "react-icons/md";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
-import React, { useState } from "react";
-import ActiveLastBreadcrumb from "../Order/ActiveLastBreadcrumb";
+import React, { useState, useEffect } from "react";
 import { BasicMap } from "./BasicMap";
-// import { Map } from "./Map";
+import "esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css";
+import * as ELG from "esri-leaflet-geocoder";
+import { useMap } from "react-leaflet";
 
 function handleClick(event) {
   event.preventDefault();
   console.info("You clicked a breadcrumb.");
 }
 
-export const Restuarant = () => {
-  const [address, setAddress] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
+function MapWithSearch({ query }) {
+  const map = useMap();
 
-  const handleFocused = (e) => {
-    setAddress(e.target.value);
-    setIsFocused(true);
-  };
+  useEffect(() => {
+    if (query) {
+      const geocodeService = ELG.geocodeService();
+      geocodeService
+        .geocode()
+        .text(query)
+        .run((err, results) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          const { latlng } = results.results[0];
+          map.flyTo([latlng.lat, latlng.lng], 13); // Adjust zoom as needed
+        });
+    }
+  }, [query, map]);
+
+  return null;
+}
+
+export const Restuarant = () => {
+  const [query, setQuery] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Searching for:", address);
+    setQuery(address); // Update the query state with the address entered
   };
 
   return (
     <>
       <NavBar />
       <section className="sidenav">
-        <div className="sidebar">
+        <div
+          className="sidebar"
+          style={{
+            height: "90vh",
+            width: "50vw",
+            overflowY: "scroll",
+            padding: "1rem",
+          }}
+        >
           <div
             role="presentation"
             onClick={handleClick}
@@ -59,7 +86,7 @@ export const Restuarant = () => {
                 type="text"
                 placeholder="Please Enter Your Location"
                 value={address}
-                onChange={handleFocused}
+                onChange={(e) => setAddress(e.target.value)}
                 className="search-input"
               />
               <button type="submit" className="search-button">
@@ -75,10 +102,39 @@ export const Restuarant = () => {
           <div className="fgb-header">
             <h2 className="fgb-title2">Restaurant</h2>
           </div>
+
+          <div className="location">
+            <div className="location1">
+              <a href="https://www.burger-king.ng/restaurants/274-ajose-adeogun/?id=5">
+                <h5 className="location-title">Victoria Island</h5>
+              </a>
+              <p className="location-subtitle">274 Ajose adeogun</p>
+              <h3 className="location-map">Show on map</h3>
+            </div>
+
+            <div className="location1">
+              <a href="https://www.burger-king.ng/restaurants/1-bisway-st-maroko-lekki?id=394">
+                <h5 className="location-title">Palms</h5>
+              </a>
+              <p className="location-subtitle">1 Bisway St, Maroko, Lekki</p>
+              <h3 className="location-map">Show on map</h3>
+            </div>
+
+            <div className="location1">
+              <a href="https://www.burger-king.ng/restaurants/274-ajose-adeogun/?id=5">
+                <h5 className="location-title">Lekki</h5>
+              </a>
+              <p className="location-subtitle">
+                11b Victoria Arobieke St, Lekki Phase 1
+              </p>
+              <h3 className="location-map">Show on map</h3>
+            </div>
+          </div>
         </div>
 
-        <BasicMap />
-        {/* <Map /> */}
+        <BasicMap>
+          <MapWithSearch query={query} />
+        </BasicMap>
       </section>
       <Footer />
     </>

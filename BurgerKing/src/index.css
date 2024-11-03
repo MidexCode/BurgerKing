@@ -610,7 +610,7 @@ a {
 .nav {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 200;
   overflow: hidden;
   padding-bottom: 1rem;
   gap: 2rem;
@@ -718,6 +718,7 @@ a {
 .form {
   margin-left: 3rem;
   margin-top: 4rem;
+  margin-right: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -730,7 +731,64 @@ a {
   margin-top: 4rem;
 }
 
-/* .sidenav {
+.sidenav {
   display: flex;
   flex-direction: row;
-} */
+}
+
+.location {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.location1 {
+  width: 90%;
+  margin-left: 2rem;
+  border-radius: 8px;
+  /* display: flex; */
+  justify-content: space-between;
+  text-align: left;
+  padding: 16px 24px;
+  background: #fff;
+}
+
+.location1:hover {
+  border: 2px solid goldenrod;
+}
+
+.location-title {
+  margin-left: 1rem;
+  line-height: 1.41;
+  letter-spacing: -0.41px;
+  font-size: 1.2rem;
+  color: #502314;
+  font-weight: 800;
+}
+
+.location-title:hover {
+  color: #d72300;
+}
+
+.location-subtitle {
+  margin-left: 1rem;
+  line-height: 2;
+  letter-spacing: -0.41px;
+  font-size: 1rem;
+  color: rgba(80, 35, 20, 0.8);
+  font-weight: 300;
+}
+
+.location-map {
+  color: #d72300;
+  margin-left: 1rem;
+  font-size: 1rem;
+  margin-top: -1rem;
+  /* line-height: 20px; */
+  font-weight: 300;
+  cursor: pointer;
+}
+
+BasicMap {
+  z-index: 1; /* Lower z-index than navbar */
+  position: relative;
+}
