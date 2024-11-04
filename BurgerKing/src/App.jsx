@@ -10,6 +10,7 @@ import { Menu } from "./Components/Menu/menu";
 import { Offers } from "./Components/Offers/Offers";
 import { Restuarant } from "./Components/Restuarant/Restuarant";
 import { Career } from "./Components/Career/Career";
+import { News } from "./Components/News/News";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/careers",
     element: <Career />,
+  },
+  {
+    path: "/News",
+    element: <News />,
   },
 ]);
 
