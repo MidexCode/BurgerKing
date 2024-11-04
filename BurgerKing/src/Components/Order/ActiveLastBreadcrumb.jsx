@@ -1,11 +1,19 @@
-import * as React from "react";
+// import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+import { useNavigate } from "react-router-dom";
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info("You clicked a breadcrumb.");
-}
+const handleClick = () => {
+  const navigate = useNavigate();
+  navigate("/");
+};
+
+// function handleClick(event) {
+//   event.preventDefault();
+//   const navigate = useNavigate();
+//   navigate("/");
+//   // console.info("You clicked a breadcrumb.");
+// }
 
 export default function ActiveLastBreadcrumb() {
   return (

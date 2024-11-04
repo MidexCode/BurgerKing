@@ -9,7 +9,8 @@ import { BasicMap } from "./BasicMap";
 
 function handleClick(event) {
   event.preventDefault();
-  console.info("You clicked a breadcrumb.");
+
+  // console.info("You clicked a breadcrumb.");
 }
 
 export const Restuarant = () => {
