@@ -1,9 +1,9 @@
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "application/javascript"
+[build]
+  command = "npm run build"  # or your build command
+  publish = "dist"          # or your build output directory
 
 [[headers]]
-  for = "/*.mjs"
+  for = "/*"
   [headers.values]
-    Content-Type = "application/javascript"
+    "Content-Type" = "text/javascript"
+    "Access-Control-Allow-Origin" = "*"
