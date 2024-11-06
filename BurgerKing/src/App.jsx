@@ -6,11 +6,12 @@ import {
 } from "react-router-dom";
 import { Home } from "./Components/home/Home";
 import { Order } from "./Components/Order/Order";
-import { Menu } from "./Components/Menu/menu";
+
 import { Offers } from "./Components/Offers/Offers";
 import { Restuarant } from "./Components/Restuarant/Restuarant";
 import { Career } from "./Components/Career/Career";
 import { News } from "./Components/News/News";
+import { Menu } from "./Components/Menu/Menu";
 
 const router = createBrowserRouter([
   {
