@@ -1,9 +1,0 @@
-[build]
-  command = "npm run build"  # or your build command
-  publish = "dist"          # or your build output directory
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    "Content-Type" = "text/javascript"
-    "Access-Control-Allow-Origin" = "*"
